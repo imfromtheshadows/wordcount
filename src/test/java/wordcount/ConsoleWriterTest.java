@@ -1,5 +1,7 @@
-import org.junit.jupiter.api.Assertions;
+package wordcount;
+
 import org.junit.jupiter.api.Test;
+import wordcount.ConsoleWriter;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

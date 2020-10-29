@@ -1,7 +1,9 @@
+package wordcount;
+
 import java.util.Objects;
 import java.util.Scanner;
 
-public class ConsoleReader {
+public class ConsoleReader implements ConsoleReadable {
     private Scanner scanner;
 
     public ConsoleReader(Scanner scanner) {
@@ -10,7 +12,7 @@ public class ConsoleReader {
         }
     }
 
-    public String readLine() {
+    public String read() {
         return scanner.nextLine();
     }
 }

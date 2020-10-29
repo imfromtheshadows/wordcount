@@ -1,6 +1,12 @@
+package wordcount;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import wordcount.Main;
+import wordcount.WordFilter;
+
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -19,7 +25,7 @@ class WordFilterTest {
             "humpty"
     })
     void matches_words(final String word) {
-        assertTrue(sut.matches(word));
+        assertTrue(sut.filter(Arrays.asList(word)));
     }
 
     @ParameterizedTest
@@ -29,6 +35,6 @@ class WordFilterTest {
             "humpty-dumpty"
     })
     void skips_words(final String word) {
-        assertFalse(sut.matches(word));
+        assertFalse(sut.filter(word));
     }
 }

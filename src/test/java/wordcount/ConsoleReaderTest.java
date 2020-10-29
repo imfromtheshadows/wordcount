@@ -1,9 +1,11 @@
+package wordcount;
+
 import org.junit.jupiter.api.Test;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
 import java.util.Scanner;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ConsoleReaderTest {
 
@@ -13,7 +15,7 @@ class ConsoleReaderTest {
         ConsoleReader reader = new ConsoleReader(new Scanner(outSpy));
         final String expected = "expected input";
 
-        String actual = reader.readLine();
+        String actual = reader.read();
 
         assertEquals(expected, actual);
     }

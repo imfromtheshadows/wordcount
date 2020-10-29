@@ -1,3 +1,5 @@
+package wordcount;
+
 import java.util.List;
 
 public interface Splitter {

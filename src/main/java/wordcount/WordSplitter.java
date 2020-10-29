@@ -1,3 +1,5 @@
+package wordcount;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -8,6 +10,6 @@ public class WordSplitter implements Splitter {
         if (line.isEmpty()) {
             return Collections.emptyList();
         }
-        return Arrays.asList(line.split(" "));
+        return Arrays.asList(line.split("\\s"));
     }
 }

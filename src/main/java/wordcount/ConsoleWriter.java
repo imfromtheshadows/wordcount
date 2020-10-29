@@ -1,3 +1,5 @@
+package wordcount;
+
 import java.io.PrintStream;
 import java.util.Objects;
 
